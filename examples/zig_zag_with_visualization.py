@@ -5,10 +5,10 @@ from pricelevels.visualization.levels_with_zigzag import plot_with_pivots
 
 df = pd.read_csv('sample.txt')
 
-zig_zag_percent = 0.8
+zig_zag_percent = 0.75
 
 zl = ZigZagClusterLevels(peak_percent_delta=zig_zag_percent, merge_distance=None,
-                         merge_percent=0.1, min_bars_between_peaks=20, peaks='Low')
+                         merge_percent=0.4, min_bars_between_peaks=20, peaks='All')
 
 zl.fit(df)
 
